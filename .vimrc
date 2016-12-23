@@ -7,7 +7,7 @@ set shiftwidth=4
 "set cindent
 "syntax on
 set nu
-"set nowrap
+set nowrap
 
 "write this line above colorscheme 
 
