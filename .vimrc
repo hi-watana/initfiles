@@ -12,13 +12,20 @@ set nowrap
 "write this line above colorscheme 
 
 autocmd ColorScheme * highlight Normal ctermbg=none
-autocmd ColorScheme * highlight Normal ctermfg=none
+"autocmd ColorScheme * highlight Normal ctermfg=none
 
 "autocmd ColorScheme * highlight LineNr ctermfg=242
 "highlight LineNr ctermfg=238
 
+" if &background == "light"
+"     colorscheme solarized
+" else
+"     colorscheme molokai
+" endif
+
 colorscheme solarized
 "colorscheme monokai
+"colorscheme molokai
 "colorscheme twilight256
 "colorscheme obsidian
 "colorscheme darkblue
