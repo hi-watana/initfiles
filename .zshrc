@@ -19,7 +19,7 @@ export PS1="[${COLOR_1}${USER}${COLOR_END}@${HOST%%.*} ${COLOR_2}%1~${COLOR_END}
 # }}}
 export PATH=/usr/local/bin:$PATH
 
-" completion settings# {{{
+# completion settings# {{{
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
@@ -41,6 +41,7 @@ alias mv="mv -i"
 alias cp="cp -i"
 alias rmb="rm *~"
 alias vi="vim"
+alias emacs="/usr/local/Cellar/emacs/25.1/bin/emacs"
 alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop"
 #alias rm="rm -i"
 ## }}}

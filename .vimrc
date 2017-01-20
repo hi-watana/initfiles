@@ -9,43 +9,55 @@ set cursorline
 set nu
 set nowrap
 set list
-set listchars=tab:˘˘,trail:…,extends:»,precedes:«,nbsp:∫"}}}
+set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
+"}}}
 
 " colorscheme settings"{{{
 "write this line above colorscheme
 
-autocmd ColorScheme * highlight Normal ctermbg=none
 "autocmd ColorScheme * highlight Normal ctermfg=none
 
+autocmd ColorScheme * highlight Normal ctermbg=none
 "autocmd ColorScheme * highlight LineNr ctermfg=242
 "highlight LineNr ctermfg=238
 
 if &background == "light"
+    autocmd ColorScheme * highlight Comment ctermfg=gray
     colorscheme solarized
 else
-    colorscheme molokai
+    autocmd ColorScheme * highlight CursorLine ctermbg=238
+    autocmd ColorScheme * highlight LineNr ctermbg=236
+    " autocmd ColorScheme * highlight Visual ctermbg=240
+    "colorscheme twilight256
+    colorscheme twilight256
+    "colorscheme molokai
 endif
-"let g:solarized_termtrans=1"}}}
+"set termguicolors
+"let g:solarized_termtrans=1
+""}}}
 
 " vim-plug"{{{
 call plug#begin('~/.vim/plugged')
 
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neoinclude.vim'
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
 "Plug 'Shougo/neco-syntax'
 "Plug 'Shougo/context_filetype.vim'
-"Plug 'Shougo/neosnippet.vim'
 Plug 'vim-scripts/javacomplete'
-"Plug 'vim-scripts/OmniCppComplete'
+Plug 'vim-scripts/OmniCppComplete'
 
-call plug#end()"}}}
+call plug#end()
+"}}}
 
 " filetype java settings"{{{
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
 autocmd FileType java :setlocal completefunc=javacomplete#CompleteParamsInfo
 autocmd FileType java :let java_highlight_all=1
 autocmd FileType java :let java_highlight_functions="style"
-autocmd FileType java :let java_allow_cpp_keywords=1"}}}
+autocmd FileType java :let java_allow_cpp_keywords=1
+"}}}
 
 " filetype cpp settings"{{{
 autocmd FileType cpp :let OmniCpp_GlobalScopeSearch=1
@@ -70,7 +82,8 @@ autocmd FileType c :let OmniCpp_DefaultNamespaces=[]
 autocmd FileType c :let OmniCpp_MayCompleteDot=1
 autocmd FileType c :let OmniCpp_MayCompleteArrow = 1
 autocmd FileType c :let OmniCpp_MayCompleteScope = 0
-autocmd FileType c :let OmniCpp_SelectFirstItem = 0"}}}
+autocmd FileType c :let OmniCpp_SelectFirstItem = 0
+"}}}
 
 autocmd FileType scheme :setlocal dictionary=/Users/hiroki/.vim/my-dict/scheme.dict
 
@@ -230,6 +243,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+"autocmd FileType c setlocal omnifunc=ccomplete#Complete
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -242,4 +256,24 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl ='\h\w*->\h\w*\|\h\w*::'
+"}}}
+
+" neosnippet settings"{{{
+" --------------------------------------------------
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" SuperTab like snippets behavior.
+imap <expr><TAB>
+\ pumvisible() ? "\<C-n>" :
+\ neosnippet#expandable_or_jumpable() ?
+\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+  endif
 "}}}
