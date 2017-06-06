@@ -10,14 +10,19 @@ colors
 # COLOR_END="%{[0m%}"
 
 # dark background
-COLOR_1="%{[38;5;196m%}"
-COLOR_2="%{[38;5;069m%}"
+COLOR_1="%{[38;5;211m%}"
+COLOR_2="%{[38;5;039m%}"
 COLOR_END="%{[0m%}"
 
 export PS1="[${COLOR_1}${USER}${COLOR_END}@${HOST%%.*} ${COLOR_2}%1~${COLOR_END}]%(!.#.$) "
 #export PS1="[%{${fg[red]}%}%n%{${reset_color}%}@%m %{${fg[blue]%}%1~%{${reset_color}%}]%(!.#.$) "
 # }}}
+
+bindkey -v
+bindkey -M vicmd "/" history-incremental-search-backward
+bindkey -M vicmd "?" history-incremental-search-forward
 export PATH=/usr/local/bin:$PATH
+export EDITOR="/usr/local/bin/vim"
 
 # completion settings# {{{
 fpath=(/usr/local/share/zsh-completions $fpath)
@@ -39,10 +44,13 @@ alias ls="ls -G"
 alias la="ls -a"
 alias mv="mv -i"
 alias cp="cp -i"
-alias rmb="rm *~"
+alias rmb="rm *~; rm .*~"
+alias grep="grep --color=auto -n"
 alias vi="vim"
-alias emacs="/usr/local/Cellar/emacs/25.1/bin/emacs"
+alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
+alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop"
+alias updatedb="/usr/libexec/locate.updatedb"
 #alias rm="rm -i"
 ## }}}
 
@@ -65,3 +73,5 @@ alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop"
 # # 「-azfu-」を表示させないための記述
 # zstyle ':auto-fu:var' postdisplay $''
 # # }}}
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

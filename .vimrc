@@ -7,34 +7,10 @@ set tabstop=4
 set shiftwidth=4
 set cursorline
 set nu
-set nowrap
+"set nowrap
 set list
 set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
 "}}}
-
-" colorscheme settings"{{{
-"write this line above colorscheme
-
-"autocmd ColorScheme * highlight Normal ctermfg=none
-
-autocmd ColorScheme * highlight Normal ctermbg=none
-"autocmd ColorScheme * highlight LineNr ctermfg=242
-"highlight LineNr ctermfg=238
-
-if &background == "light"
-    autocmd ColorScheme * highlight Comment ctermfg=gray
-    colorscheme solarized
-else
-    autocmd ColorScheme * highlight CursorLine ctermbg=238
-    autocmd ColorScheme * highlight LineNr ctermbg=236
-    " autocmd ColorScheme * highlight Visual ctermbg=240
-    "colorscheme twilight256
-    colorscheme twilight256
-    "colorscheme molokai
-endif
-"set termguicolors
-"let g:solarized_termtrans=1
-""}}}
 
 " vim-plug"{{{
 call plug#begin('~/.vim/plugged')
@@ -47,6 +23,9 @@ Plug 'Shougo/neosnippet-snippets'
 "Plug 'Shougo/context_filetype.vim'
 Plug 'vim-scripts/javacomplete'
 Plug 'vim-scripts/OmniCppComplete'
+
+Plug 'lifepillar/vim-solarized8'
+Plug 'w0ng/vim-hybrid'
 
 call plug#end()
 "}}}
@@ -67,6 +46,33 @@ autocmd FileType cpp :let OmniCpp_ShowPrototypeInAbbr=0
 autocmd FileType cpp :let OmniCpp_ShowAccess=1
 autocmd FileType cpp :let OmniCpp_DefaultNamespaces=[]
 autocmd FileType cpp :let OmniCpp_MayCompleteDot=1
+" colorscheme settings"{{{
+"write this line above colorscheme
+
+"autocmd ColorScheme * highlight Normal ctermfg=none
+
+"autocmd ColorScheme * highlight Normal ctermbg=none
+"autocmd ColorScheme * highlight LineNr ctermfg=242
+"highlight LineNr ctermfg=238
+
+if &background == "light"
+    autocmd ColorScheme * highlight Comment ctermfg=gray
+    colorscheme solarized8_light
+else
+    " autocmd ColorScheme * highlight CursorLine ctermbg=238
+    " autocmd ColorScheme * highlight LineNr ctermbg=236
+    " autocmd ColorScheme * highlight Visual ctermbg=240
+    "colorscheme twilight256
+    "colorscheme molokai
+    "colorscheme solarized
+    colorscheme hybrid
+endif
+
+set termguicolors
+
+"let g:solarized_termtrans=1
+""}}}
+
 autocmd FileType cpp :let OmniCpp_MayCompleteArrow = 1
 autocmd FileType cpp :setlocal path=.,/usr/include/c++/4.2.1,,
 autocmd FileType cpp :let OmniCpp_MayCompleteScope = 0
