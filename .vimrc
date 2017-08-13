@@ -7,28 +7,55 @@ set tabstop=4
 set shiftwidth=4
 set cursorline
 set nu
-"set nowrap
 set list
 set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
+set wildmenu
+set laststatus=2
+set formatoptions+=mM
 "}}}
+
+nnoremap <C-]> g<C-]>
 
 " vim-plug"{{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-"Plug 'Shougo/neco-syntax'
-"Plug 'Shougo/context_filetype.vim'
 Plug 'vim-scripts/javacomplete'
 Plug 'vim-scripts/OmniCppComplete'
 
+Plug 'scrooloose/nerdtree'
+Plug 'itchyny/lightline.vim'
+
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0ng/vim-hybrid'
+Plug 'jonathanfilip/vim-lucius'
+Plug 'freeo/vim-kalisi'
+Plug 'reedes/vim-colors-pencil'
+
+Plug 'brgmnn/vim-opencl'
 
 call plug#end()
 "}}}
+
+" colorscheme settings"{{{
+if &background == "light"
+    colorscheme kalisi
+else
+    colorscheme molokai
+endif
+
+set termguicolors
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+""}}}
+
+" lightline settings {{{
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+" }}}
 
 " filetype java settings"{{{
 autocmd FileType java :setlocal omnifunc=javacomplete#Complete
@@ -46,33 +73,6 @@ autocmd FileType cpp :let OmniCpp_ShowPrototypeInAbbr=0
 autocmd FileType cpp :let OmniCpp_ShowAccess=1
 autocmd FileType cpp :let OmniCpp_DefaultNamespaces=[]
 autocmd FileType cpp :let OmniCpp_MayCompleteDot=1
-" colorscheme settings"{{{
-"write this line above colorscheme
-
-"autocmd ColorScheme * highlight Normal ctermfg=none
-
-"autocmd ColorScheme * highlight Normal ctermbg=none
-"autocmd ColorScheme * highlight LineNr ctermfg=242
-"highlight LineNr ctermfg=238
-
-if &background == "light"
-    autocmd ColorScheme * highlight Comment ctermfg=gray
-    colorscheme solarized8_light
-else
-    " autocmd ColorScheme * highlight CursorLine ctermbg=238
-    " autocmd ColorScheme * highlight LineNr ctermbg=236
-    " autocmd ColorScheme * highlight Visual ctermbg=240
-    "colorscheme twilight256
-    "colorscheme molokai
-    "colorscheme solarized
-    colorscheme hybrid
-endif
-
-set termguicolors
-
-"let g:solarized_termtrans=1
-""}}}
-
 autocmd FileType cpp :let OmniCpp_MayCompleteArrow = 1
 autocmd FileType cpp :setlocal path=.,/usr/include/c++/4.2.1,,
 autocmd FileType cpp :let OmniCpp_MayCompleteScope = 0
@@ -94,12 +94,6 @@ autocmd FileType c :let OmniCpp_SelectFirstItem = 0
 autocmd FileType scheme :setlocal dictionary=/Users/hiroki/.vim/my-dict/scheme.dict
 
 autocmd FileType python :let python_highlight_all=1
-
-"nnoremap <C-b> :make<CR>
-"nnoremap gk k
-"nnoremap k gk
-"nnoremap gj j
-"nnoremap j gj
 
 " sample setting "{{{
 " --------------------------------------------------
@@ -187,81 +181,6 @@ if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
                 \ | wincmd p | diffthis
 endif
-"}}}
-
-" neocomplete setting "{{{
-"----------------------------------------------
-"Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" Define dictionary.
-let g:neocomplete#sources#dictionary#dictionaries = {
-            \ 'default' : '',
-            \ 'vimshell' : $HOME.'/.vimshell_hist',
-            \ 'scheme' : $HOME.'/.gosh_completions'
-            \ }
-
-" Define keyword.
-if !exists('g:neocomplete#keyword_patterns')
-    let g:neocomplete#keyword_patterns = {}
-endif
-let g:neocomplete#keyword_patterns['default'] ='\h\w*'
-
-" Plugin key-mappings.
-inoremap <expr><C-g> neocomplete#undo_completion()
-inoremap <expr><C-l> neocomplete#complete_common_string()
-
-" Recommended key-mappings.
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return (pumvisible() ? "\<C-y>" : "" ) . "\<CR>"
-    For no inserting <CR> key.
-    "return pumvisible() ? "\<C-y>" : "\<CR>"
-endfunction
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"autocmd FileType c setlocal omnifunc=ccomplete#Complete
-
-" Enable heavy omni completion.
-if !exists('g:neocomplete#sources#omni#input_patterns')
-    let g:neocomplete#sources#omni#input_patterns = {}
-endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^.  \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-
-" For perlomni.vim setting.
-" https://github.com/c9s/perlomni.vim
-let g:neocomplete#sources#omni#input_patterns.perl ='\h\w*->\h\w*\|\h\w*::'
 "}}}
 
 " neosnippet settings"{{{
