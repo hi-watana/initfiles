@@ -19,9 +19,9 @@ nnoremap <C-]> g<C-]>
 " vim-plug"{{{
 call plug#begin('~/.vim/plugged')
 
-Plug 'Shougo/neoinclude.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
+"Plug 'Shougo/neoinclude.vim'
+"Plug 'Shougo/neosnippet.vim'
+"Plug 'Shougo/neosnippet-snippets'
 Plug 'vim-scripts/javacomplete'
 Plug 'vim-scripts/OmniCppComplete'
 
@@ -33,8 +33,9 @@ Plug 'w0ng/vim-hybrid'
 Plug 'jonathanfilip/vim-lucius'
 Plug 'freeo/vim-kalisi'
 Plug 'reedes/vim-colors-pencil'
+Plug 'tomasr/molokai'
 
-Plug 'brgmnn/vim-opencl'
+"Plug 'brgmnn/vim-opencl'
 
 call plug#end()
 "}}}
@@ -76,7 +77,8 @@ autocmd FileType cpp :let OmniCpp_MayCompleteDot=1
 autocmd FileType cpp :let OmniCpp_MayCompleteArrow = 1
 autocmd FileType cpp :setlocal path=.,/usr/include/c++/4.2.1,,
 autocmd FileType cpp :let OmniCpp_MayCompleteScope = 0
-autocmd FileType cpp :let OmniCpp_SelectFirstItem = 0"}}}
+autocmd FileType cpp :let OmniCpp_SelectFirstItem = 0
+" }}}
 
 " filetype c settings"{{{
 "autocmd FileType c :setlocal dictionary=/Users/hiroki/.vim/my-dict/c.dict
@@ -183,22 +185,22 @@ if !exists(":DiffOrig")
 endif
 "}}}
 
-" neosnippet settings"{{{
-" --------------------------------------------------
-imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-k>     <Plug>(neosnippet_expand_target)
-
-" SuperTab like snippets behavior.
-imap <expr><TAB>
-\ pumvisible() ? "\<C-n>" :
-\ neosnippet#expandable_or_jumpable() ?
-\    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-" For conceal markers.
-if has('conceal')
-  set conceallevel=2 concealcursor=niv
-  endif
-"}}}
+" " neosnippet settings"{{{
+" " --------------------------------------------------
+" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+" xmap <C-k>     <Plug>(neosnippet_expand_target)
+" 
+" " SuperTab like snippets behavior.
+" imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+" \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+" 
+" " For conceal markers.
+" if has('conceal')
+"   set conceallevel=2 concealcursor=niv
+"   endif
+" "}}}

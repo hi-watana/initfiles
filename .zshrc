@@ -10,7 +10,7 @@ colors
 # COLOR_END="%{[0m%}"
 
 # dark background
-COLOR_1="%{[38;5;211m%}"
+COLOR_1="%{[38;5;208m%}"
 COLOR_2="%{[38;5;039m%}"
 COLOR_END="%{[0m%}"
 
@@ -36,6 +36,8 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=1000
+
+
 setopt hist_ignore_dups
 # }}}
 #setopt auto_cd
@@ -47,14 +49,14 @@ alias cp="cp -i"
 alias rmb="rm *~; rm .*~"
 alias grep="grep --color=auto -n"
 alias vi="vim"
-alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
+#alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
 alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop"
 alias updatedb="/usr/libexec/locate.updatedb"
 #alias rm="rm -i"
 ## }}}
 
-# # color_test# {{{
+# color_test# {{{
 # function color_test() {
 #     for col in {000..255}
 #     do
@@ -75,3 +77,4 @@ alias updatedb="/usr/libexec/locate.updatedb"
 # # }}}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH"
