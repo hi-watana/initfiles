@@ -22,8 +22,8 @@ call plug#begin('~/.vim/plugged')
 "Plug 'Shougo/neoinclude.vim'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
-Plug 'vim-scripts/javacomplete'
-Plug 'vim-scripts/OmniCppComplete'
+"Plug 'vim-scripts/javacomplete'
+"Plug 'vim-scripts/OmniCppComplete'
 
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
