@@ -10,5 +10,5 @@ set imdisable   " IMを無効化
 set antialias
 "set guifont=Monaco:h17
 set guifont=monospace\ 20
-noremap! ¥ \
-noremap! \ ¥
+"noremap! ¥ \
+"noremap! \ ¥
