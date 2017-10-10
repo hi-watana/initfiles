@@ -3,4 +3,4 @@ do
 	ln -s $PWD/${file} $HOME/${file}
 done
 ln -s $PWD/.zshrc_macos $HOME/.zshrc
-ln -s /home/hiroki/initfiles/.gvimrc_macos $HOME/.gvimrc
+ln -s $PWD/.gvimrc_macos $HOME/.gvimrc
