@@ -41,11 +41,12 @@ call plug#end()
 "}}}
 
 " colorscheme settings"{{{
-if &background == "light"
-    colorscheme kalisi
-else
-    colorscheme molokai
-endif
+"if &background == "light"
+"    colorscheme kalisi
+"else
+"    colorscheme molokai
+"endif
+colorscheme molokai
 
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
