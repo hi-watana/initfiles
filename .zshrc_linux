@@ -47,8 +47,8 @@ alias cp="cp -i"
 alias rmb="rm *~; rm .*~"
 alias grep="grep --color=auto -n"
 alias vi="vim"
-alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
-alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
+#alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
+#alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
 alias matlab="/Applications/MATLAB_R2016b.app/bin/matlab -nodesktop"
 alias updatedb="/usr/libexec/locate.updatedb"
 #alias rm="rm -i"
@@ -74,6 +74,6 @@ alias updatedb="/usr/libexec/locate.updatedb"
 # zstyle ':auto-fu:var' postdisplay $''
 # # }}}
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export VISUAL=vim
