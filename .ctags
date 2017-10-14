@@ -1,0 +1,12 @@
+--append=yes
+--recurse=yes
+--php-kinds=cfd
+--html-kinds=af
+--java-kinds=cfimp
+--ruby-kinds=cfm
+--perl-kinds
+--python-kinds=cfm
+--c++-kinds=+p
+--c-kinds=+p
+--fields=+iaS
+--extra=+q
