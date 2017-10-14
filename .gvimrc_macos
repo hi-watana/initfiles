@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker:
 "colorscheme solarized8_light
 "colorscheme hybrid
-colorscheme macvim
+colorscheme solarized8_light
 "set background=dark
 set background=light
 "set showtabline=1  " タブを常に表示
