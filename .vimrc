@@ -99,6 +99,7 @@ autocmd FileType c :let OmniCpp_SelectFirstItem = 0
 autocmd FileType scheme :setlocal dictionary=/Users/hiroki/.vim/my-dict/scheme.dict
 
 autocmd FileType python :let python_highlight_all=1
+autocmd BufRead *.tex set tw=80
 
 " sample setting "{{{
 " --------------------------------------------------
