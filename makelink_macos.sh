@@ -1,6 +1,8 @@
-for file in .tmux.conf .vimrc .gitconfig .ctags
+for file in .vimrc .gitconfig .ctags
 do
 	ln -s $PWD/${file} $HOME/${file}
 done
-ln -s $PWD/.zshrc_macos $HOME/.zshrc
-ln -s $PWD/.gvimrc_macos $HOME/.gvimrc
+for file in .zshrc .gvimrc .tmux.conf
+do
+	ln -s $PWD/${file}_macos $HOME/${file}
+done

@@ -1,6 +1,8 @@
-for file in .tmux.conf .vimrc .gitconfig .ctags
+for file in .vimrc .gitconfig .ctags
 do
 	ln -s $PWD/${file} $HOME/${file}
 done
-ln -s $PWD/.zshrc_linux $HOME/.zshrc
-ln -s /home/hiroki/initfiles/.gvimrc_linux $HOME/.gvimrc
+for file in .zshrc .gvimrc .tmux.conf
+do
+	ln -s $PWD/${file}_linux $HOME/${file}
+done
