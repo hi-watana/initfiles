@@ -28,7 +28,7 @@ export EDITOR="/usr/local/bin/vim"
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # }}}
 
