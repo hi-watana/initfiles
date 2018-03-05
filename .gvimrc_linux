@@ -9,6 +9,7 @@ set imdisable   " IMを無効化
 "set transparency=10  " 透明度を指定
 set antialias
 "set guifont=Monaco:h17
-set guifont=monospace\ 20
+set guifont=monospace\ 17
+set guioptions-=T  "remove tool bar
 "noremap! ¥ \
 "noremap! \ ¥

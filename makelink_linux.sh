@@ -1,4 +1,4 @@
-for file in .vimrc .gitconfig .ctags
+for file in .vimrc .gitconfig .ctags .Xmodmap
 do
 	ln -s $PWD/${file} $HOME/${file}
 done
