@@ -22,6 +22,7 @@ bindkey -v
 bindkey -M vicmd "/" history-incremental-search-backward
 bindkey -M vicmd "?" history-incremental-search-forward
 export PATH=/opt/anaconda/bin/:/usr/local/bin:$PATH
+#export PATH=/usr/local/bin:$PATH
 export EDITOR="/usr/local/bin/vim"
 
 # completion settings# {{{
