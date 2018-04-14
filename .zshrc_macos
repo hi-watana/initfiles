@@ -27,7 +27,7 @@ export EDITOR=vim
 fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+#zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 # }}}
 
@@ -46,7 +46,8 @@ alias la="ls -a"
 alias mv="mv -i"
 alias cp="cp -i"
 alias rmb="rm *~; rm .*~"
-alias grep="grep --color=auto -n"
+#alias grep="grep --color=auto -n"
+alias grep="grep --color=auto"
 alias vi="vim"
 #alias emacs="/usr/local/Cellar/emacs/25.2/bin/emacs"
 alias ctags="/usr/local/Cellar/ctags/5.8_1/bin/ctags"
@@ -75,5 +76,7 @@ alias updatedb="/usr/libexec/locate.updatedb"
 # zstyle ':auto-fu:var' postdisplay $''
 # # }}}
 
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home"
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH:$HOME/os/bin:$HOME/gcc-arm-none-eabi-6-2017-q2-update/bin"
+export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH:$HOME/.opt/bin"
