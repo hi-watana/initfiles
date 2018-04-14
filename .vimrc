@@ -34,6 +34,9 @@ Plug 'jonathanfilip/vim-lucius'
 Plug 'freeo/vim-kalisi'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tomasr/molokai'
+Plug 'mxw/vim-prolog'
+"Plug 'adimit/prolog.vim'
+"Plug 'soli/prolog-vim'
 
 "Plug 'brgmnn/vim-opencl'
 
@@ -47,6 +50,7 @@ call plug#end()
 "    colorscheme molokai
 "endif
 colorscheme molokai
+"colorscheme solarized8_light
 
 if has("termguicolors")
     set termguicolors
@@ -99,7 +103,7 @@ autocmd FileType c :let OmniCpp_SelectFirstItem = 0
 autocmd FileType scheme :setlocal dictionary=/Users/hiroki/.vim/my-dict/scheme.dict
 
 autocmd FileType python :let python_highlight_all=1
-autocmd BufRead *.tex set tw=80
+"autocmd BufRead *.tex set tw=80
 
 " sample setting "{{{
 " --------------------------------------------------
