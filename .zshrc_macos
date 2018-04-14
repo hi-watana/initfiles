@@ -76,4 +76,4 @@ alias updatedb="/usr/libexec/locate.updatedb"
 # # }}}
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH"
+export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH:$HOME/os/bin:$HOME/gcc-arm-none-eabi-6-2017-q2-update/bin"
