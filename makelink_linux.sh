@@ -1,4 +1,4 @@
-for file in .tmux.conf .vimrc .gitconfig .ctags
+for file in .tmux.conf .vimrc .ctags
 do
 	ln -s $PWD/${file} $HOME/${file}
 done
