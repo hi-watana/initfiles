@@ -3,8 +3,8 @@
 " --------------------------------------------------
 set nocompatible
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set cursorline
 set nu
 set list
@@ -40,17 +40,22 @@ Plug 'kana/vim-filetype-haskell'
 Plug 'dag/vim2hs'
 "Plug 'adimit/prolog.vim'
 "Plug 'soli/prolog-vim'
+Plug 'srcery-colors/srcery-vim'
 
 "Plug 'brgmnn/vim-opencl'
-Plug 'blueshirts/darcula'
+"Plug 'blueshirts/darcula'
 "Plug 'mattn/emmet-vim'
+Plug 'purescript-contrib/purescript-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 "}}}
 
 " colorscheme settings"{{{
 if &background == "light"
-    colorscheme solarized8_light
+    colorscheme kalisi
 else
     colorscheme molokai
 endif
