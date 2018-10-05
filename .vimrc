@@ -28,6 +28,9 @@ Plug 'vim-scripts/javacomplete'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
+
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0ng/vim-hybrid'
 Plug 'jonathanfilip/vim-lucius'
