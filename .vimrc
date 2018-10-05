@@ -3,8 +3,8 @@
 " --------------------------------------------------
 set nocompatible
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set cursorline
 set nu
 set list
@@ -58,7 +58,7 @@ call plug#end()
 if &background == "light"
     colorscheme kalisi
 else
-    colorscheme molokai
+    colorscheme srcery
 endif
 "colorscheme molokai
 "colorscheme solarized8_light
