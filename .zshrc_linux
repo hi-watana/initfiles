@@ -99,3 +99,4 @@ alias updatedb="/usr/libexec/locate.updatedb"
 alias pbcopy="xsel --clipboard --input"
 
 export VISUAL=vim
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

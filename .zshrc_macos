@@ -100,3 +100,4 @@ export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Ho
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="/usr/local/anaconda3/bin:/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH:$HOME/.opt/bin"
 #export PATH="/usr/local/bin:/usr/local/opt/sqlite/bin:$PATH:$HOME/.opt/bin"
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
