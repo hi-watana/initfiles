@@ -58,12 +58,12 @@ call plug#end()
 "}}}
 
 " colorscheme settings"{{{
-if &background == "light"
-    colorscheme kalisi
-else
-    colorscheme srcery
-endif
-"colorscheme molokai
+"if &background == "light"
+"    colorscheme kalisi
+"else
+"    colorscheme molokai
+"endif
+colorscheme srcery
 "colorscheme solarized8_light
 
 if has("termguicolors")
