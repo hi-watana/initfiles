@@ -28,7 +28,8 @@ Plug 'vim-scripts/javacomplete'
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
 
-Plug 'davidhalter/jedi-vim'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tpope/vim-fugitive'
 
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0ng/vim-hybrid'
@@ -42,21 +43,27 @@ Plug 'kana/vim-filetype-haskell'
 Plug 'dag/vim2hs'
 "Plug 'adimit/prolog.vim'
 "Plug 'soli/prolog-vim'
+Plug 'srcery-colors/srcery-vim'
 
 "Plug 'brgmnn/vim-opencl'
-Plug 'blueshirts/darcula'
+"Plug 'blueshirts/darcula'
 "Plug 'mattn/emmet-vim'
+Plug 'davidhalter/jedi-vim'
+Plug 'purescript-contrib/purescript-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 "}}}
 
 " colorscheme settings"{{{
-if &background == "light"
-    colorscheme solarized8_light
-else
-    colorscheme molokai
-endif
-"colorscheme molokai
+"if &background == "light"
+"    colorscheme kalisi
+"else
+"    colorscheme molokai
+"endif
+colorscheme srcery
 "colorscheme solarized8_light
 
 if has("termguicolors")
@@ -68,7 +75,14 @@ endif
 
 " lightline settings {{{
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'powerline',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
       \ }
 " }}}
 
