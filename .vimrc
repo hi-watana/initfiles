@@ -22,7 +22,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'Shougo/neoinclude.vim'
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
-Plug 'vim-scripts/javacomplete'
+"Plug 'vim-scripts/javacomplete'
 "Plug 'vim-scripts/OmniCppComplete'
 
 Plug 'scrooloose/nerdtree'
@@ -33,7 +33,7 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'lifepillar/vim-solarized8'
 Plug 'w0ng/vim-hybrid'
-Plug 'jonathanfilip/vim-lucius'
+"Plug 'jonathanfilip/vim-lucius'
 Plug 'freeo/vim-kalisi'
 Plug 'reedes/vim-colors-pencil'
 Plug 'tomasr/molokai'
@@ -41,6 +41,7 @@ Plug 'mxw/vim-prolog'
 Plug 'cocopon/iceberg.vim'
 Plug 'kana/vim-filetype-haskell'
 Plug 'dag/vim2hs'
+"Plug 'jscappini/material.vim'
 "Plug 'adimit/prolog.vim'
 "Plug 'soli/prolog-vim'
 Plug 'srcery-colors/srcery-vim'
@@ -59,11 +60,11 @@ call plug#end()
 
 " colorscheme settings"{{{
 "if &background == "light"
-"    colorscheme kalisi
+"    colorscheme pencil
 "else
 "    colorscheme molokai
 "endif
-colorscheme srcery
+colorscheme molokai
 "colorscheme solarized8_light
 
 if has("termguicolors")
