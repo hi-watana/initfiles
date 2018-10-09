@@ -14,7 +14,8 @@ COLOR_1="%{[38;5;196m%}"
 COLOR_2="%{[38;5;039m%}"
 COLOR_END="%{[0m%}"
 
-export PS1="[${COLOR_1}${USER}${COLOR_END}@${HOST%%.*} ${COLOR_2}%1~${COLOR_END}]%(!.#.$) "
+export PS1="[${COLOR_1}${USER}${COLOR_END}@${HOST%%.*} ${COLOR_2}%1~${COLOR_END}]
+${COLOR_1}%(!.#.$)${COLOR_END} "
 #export PS1="[%{${fg[red]}%}%n%{${reset_color}%}@%m %{${fg[blue]%}%1~%{${reset_color}%}]%(!.#.$) "
 
 setopt prompt_subst
