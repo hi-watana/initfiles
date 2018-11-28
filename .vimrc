@@ -1,18 +1,17 @@
 " vim:set foldmethod=marker:
 " basic settings"{{{
 " --------------------------------------------------
+scriptencoding utf-8
+set encoding=utf-8
 set nocompatible
 set expandtab
 set tabstop=4
 set shiftwidth=4
 set cursorline
 set nu
-set list
-set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
 set wildmenu
 set laststatus=2
 set formatoptions+=mM
-
 set langmenu=en_US
 let $LANG = 'en_US'
 "}}}
