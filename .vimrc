@@ -49,7 +49,7 @@ Plug 'srcery-colors/srcery-vim'
 "Plug 'brgmnn/vim-opencl'
 "Plug 'blueshirts/darcula'
 "Plug 'mattn/emmet-vim'
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 Plug 'purescript-contrib/purescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'posva/vim-vue'
@@ -64,7 +64,7 @@ call plug#end()
 "else
 "    colorscheme molokai
 "endif
-colorscheme molokai
+colorscheme srcery
 "colorscheme solarized8_light
 
 if has("termguicolors")

@@ -2,7 +2,7 @@
 "colorscheme solarized8_light
 "colorscheme hybrid
 "colorscheme solarized8_light
-colorscheme solarized8_dark
+colorscheme srcery
 set background=dark
 "set background=light
 "set showtabline=1  " タブを常に表示
@@ -12,5 +12,7 @@ set antialias
 "set guifont=Monaco:h17
 set guifont=monospace\ 16
 set guioptions-=T  "remove tool bar
+set guioptions-=m  "remove menu bar
+set guioptions-=r  "remove right-side scroll bar
 "noremap! ¥ \
 "noremap! \ ¥
