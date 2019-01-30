@@ -49,15 +49,17 @@ Plug 'dag/vim2hs'
 "Plug 'adimit/prolog.vim'
 "Plug 'soli/prolog-vim'
 Plug 'srcery-colors/srcery-vim'
+"Plug 'aereal/vim-colors-japanesque'
+Plug 'sts10/vim-pink-moon'
 
 "Plug 'brgmnn/vim-opencl'
 "Plug 'blueshirts/darcula'
 "Plug 'mattn/emmet-vim'
 "Plug 'davidhalter/jedi-vim'
-Plug 'purescript-contrib/purescript-vim'
-Plug 'kchmck/vim-coffee-script'
-Plug 'posva/vim-vue'
-Plug 'digitaltoad/vim-pug'
+"Plug 'purescript-contrib/purescript-vim'
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'posva/vim-vue'
+"Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 "}}}
@@ -70,6 +72,7 @@ call plug#end()
 "endif
 colorscheme srcery
 "colorscheme solarized8_light
+"colorscheme pink-moon
 
 if has("termguicolors")
     set termguicolors
