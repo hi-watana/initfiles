@@ -58,6 +58,7 @@ Plug 'purescript-contrib/purescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
+Plug 'rgrinberg/vim-ocaml'
 
 call plug#end()
 "}}}
