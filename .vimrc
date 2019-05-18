@@ -72,9 +72,9 @@ call plug#end()
 "else
 "    colorscheme molokai
 "endif
-"colorscheme srcery
+colorscheme srcery
 "colorscheme solarized8_light
-colorscheme pink-moon
+"colorscheme pink-moon
 
 if has("termguicolors")
     set termguicolors
@@ -105,7 +105,7 @@ autocmd FileType java :let java_allow_cpp_keywords=1
 "}}}
 
 " filetype cpp settings"{{{
-
+let g:cpp_member_variable_highlight = 1
 " }}}
 
 " filetype c settings"{{{
