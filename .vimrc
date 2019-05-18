@@ -9,8 +9,8 @@ set tabstop=4
 set shiftwidth=4
 set cursorline
 set nu
-set list
-set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
+"set list
+"set listchars=tab:\ \ ,trail:…,extends:»,precedes:«,nbsp:∫
 set wildmenu
 set laststatus=2
 set formatoptions+=mM
@@ -27,7 +27,6 @@ call plug#begin('~/.vim/plugged')
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
 "Plug 'vim-scripts/javacomplete'
-"Plug 'vim-scripts/OmniCppComplete'
 
 Plug 'scrooloose/nerdtree'
 Plug 'itchyny/lightline.vim'
@@ -62,6 +61,7 @@ Plug 'rgrinberg/vim-ocaml'
 "Plug 'kchmck/vim-coffee-script'
 "Plug 'posva/vim-vue'
 "Plug 'digitaltoad/vim-pug'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 "}}}
@@ -72,9 +72,9 @@ call plug#end()
 "else
 "    colorscheme molokai
 "endif
-colorscheme srcery
+"colorscheme srcery
 "colorscheme solarized8_light
-"colorscheme pink-moon
+colorscheme pink-moon
 
 if has("termguicolors")
     set termguicolors
@@ -105,17 +105,7 @@ autocmd FileType java :let java_allow_cpp_keywords=1
 "}}}
 
 " filetype cpp settings"{{{
-autocmd FileType cpp :let OmniCpp_GlobalScopeSearch=1
-autocmd FileType cpp :let OmniCpp_NamespaceSearch=1
-autocmd FileType cpp :let OmniCpp_DisplayMode=0
-autocmd FileType cpp :let OmniCpp_ShowPrototypeInAbbr=0
-autocmd FileType cpp :let OmniCpp_ShowAccess=1
-autocmd FileType cpp :let OmniCpp_DefaultNamespaces=[]
-autocmd FileType cpp :let OmniCpp_MayCompleteDot=1
-autocmd FileType cpp :let OmniCpp_MayCompleteArrow = 1
-autocmd FileType cpp :setlocal path=.,/usr/include/c++/4.2.1,,
-autocmd FileType cpp :let OmniCpp_MayCompleteScope = 0
-autocmd FileType cpp :let OmniCpp_SelectFirstItem = 0
+
 " }}}
 
 " filetype c settings"{{{
