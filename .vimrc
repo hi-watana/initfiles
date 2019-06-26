@@ -62,6 +62,7 @@ Plug 'rgrinberg/vim-ocaml'
 "Plug 'posva/vim-vue'
 "Plug 'digitaltoad/vim-pug'
 Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'othree/yajs.vim'
 
 call plug#end()
 "}}}
