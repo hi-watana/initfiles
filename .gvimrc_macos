@@ -1,7 +1,7 @@
 " vim: set foldmethod=marker:
 "colorscheme solarized8_light
 "colorscheme hybrid
-colorscheme molokai
+colorscheme yellow-moon
 "set background=dark
 "set background=light
 "set showtabline=1  " タブを常に表示
@@ -9,10 +9,10 @@ colorscheme molokai
 "set transparency=10  " 透明度を指定
 set antialias
 "set guifont=Monaco:h17
-set guifont=menlo:h18
+set guifont=menlo:h17
 "set guioptions-=r
 "set guioptions-=R
 "set guioptions-=l
 "set guioptions-=L
-noremap! ¥ \
-noremap! \ ¥
+"noremap! ¥ \
+"noremap! \ ¥
