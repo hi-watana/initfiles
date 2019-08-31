@@ -63,6 +63,7 @@ Plug 'rgrinberg/vim-ocaml'
 "Plug 'digitaltoad/vim-pug'
 Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'othree/yajs.vim'
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 "}}}
